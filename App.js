@@ -1,15 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+import React from 'react';
+import { StyleSheet, Text, View,TextInput,Button } from 'react-native';
+
+const Citas=()=> {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>Citas Médicas</Text>
+
+
+<View style={styles.imputgroup}>
+<Text>Nombre</Text>
+<View style={styles.text}>
+  <TextInput ></TextInput>
+</View>
+<Text>Apellidos</Text>
+<View style={styles.text}>
+  <TextInput ></TextInput>
+</View>
+<Text>Fecha de Nacimiento</Text>
+<View style={styles.text}>
+  <TextInput ></TextInput>
+</View>
+<View style={styles.button}>
+  <Button title="Guardar" />
+</View>
+</View>
+      
     </View>
+
+
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -19,3 +41,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+export default Citas;
